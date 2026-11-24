@@ -1,0 +1,24 @@
+{
+  "name": "uws",
+  "version": "8.14.1",
+  "description": "ws-compatible shim for colyseus 0.5. uws is unmaintained and fails to compile against Node 20+/V8 11; colyseus only uses the ws-compatible API subset.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.5.10",
+    "typescript": "^5.6.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "check:types": "tsc --noEmit"
+  }
+}

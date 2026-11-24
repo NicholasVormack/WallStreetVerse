@@ -1,0 +1,42 @@
+{
+  "name": "wallstreet-verse",
+  "private": true,
+  "description": "WallStreetVerse - Phase 1: authoritative multiplayer movement & zone-routing engine",
+  "version": "0.1.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "check:types": "npm run check:types -w packages/shared && npm run check:types -w packages/server && npm run check:types -w packages/client",
+    "build:shared": "npm run build -w packages/shared",
+    "build:server": "npm run build -w packages/server",
+    "build:client": "npm run build -w packages/client",
+    "build": "npm run build:shared && npm run build:client",
+    "predev:client": "npm run build:shared",
+    "predev:server": "npm run build:shared",
+    "dev:server": "npm run dev -w packages/server",
+    "dev:client": "npm run dev -w packages/client",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.0",
+    "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.3"
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "printWidth": 100,
+    "trailingComma": "es5"
+  },
+  "allowScripts": {
+    "uws@8.14.1": true
+  }
+}

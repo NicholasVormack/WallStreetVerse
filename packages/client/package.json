@@ -1,0 +1,23 @@
+{
+  "name": "@wallstreet/client",
+  "private": true,
+  "version": "0.1.0",
+  "description": "WallStreetVerse Phase 1 client: Vite + Phaser 3 dumb-terminal renderer",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc",
+    "check:types": "tsc --noEmit",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@wallstreet/shared": "*",
+    "@colyseus/msgpackr": "^1.11.3",
+    "phaser": "^3.84.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.0"
+  }
+}
